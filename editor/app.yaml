@@ -1,0 +1,36 @@
+runtime: go114
+env_variables:
+  PROJECT_ID: "thirdpen"
+  DEFAULT_BUCKET: "thirdpen.appspot.com"
+  UPLOADABLE_BUCKET: "uploadable"
+
+instance_class: F1
+automatic_scaling:
+  target_cpu_utilization: 0.70
+  target_throughput_utilization: 0.70
+  min_idle_instances: 0
+  max_idle_instances: 1
+  min_instances: 0
+  min_pending_latency: automatic
+  max_pending_latency: automatic
+  max_concurrent_requests: 5
+
+handlers:
+- url: /icon.png
+  static_files: editor/static/images/icon.png
+  upload: editor/static/images/icon.png
+- url: /images
+  static_dir: editor/static/images
+- url: /main.js
+  static_files: editor/static/main.js
+  upload: editor/static/main.js
+- url: /index.html
+  static_files: editor/static/index.html
+  upload: editor/static/index.html
+- url: /.*
+  secure: always
+  redirect_http_response_code: 301
+  script: auto
+- url: /
+  static_files: editor/static/index.html
+  upload: editor/static/index.html

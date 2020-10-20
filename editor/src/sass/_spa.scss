@@ -1,0 +1,260 @@
+ /* thirdpen spa.scss
+ * --update history-------
+ * 2020 0917
+ * See license
+ */
+
+/*-----General Styles------------------*/
+
+/* fontawesome 
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+*/
+* { margin: 0; padding: 0; }
+*, ::before, ::after { box-sizing: border-box; }
+:root {
+  font-size: 15px;
+  font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+}
+body {
+  background: #F5F5F5;
+}
+body, td, p {
+  color: #5e5e5e;
+}
+h1 {font-size: 2rem;}
+h2 {font-size: 1.5rem;}
+h3 {font-size: 1.2rem;}
+h4 {font-size: 1rem;}
+h5 {font-size: 0.83rem;}
+h6 {font-size: 0.67rem;}
+h1, h2, h3, h4, h5, h6 {
+  margin: 10px 0;
+  color: #616161;
+  font-weight: 600;
+}
+ol, ul, dl {
+  list-style-position: inside;
+  list-style: none;
+}
+hr {
+  border: .5px solid;
+}
+section > h1, nav > h1 {
+  display: none;
+}
+.el-hide {
+  display: none;
+}
+img {
+  display: block;
+  vertical-align: middle;
+  border-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:link, a:visited { color : inherit; }
+a:active, a:hover { outline-width: 0; }
+.logo {
+  height: 48px;
+  margin-right: 15px;
+}
+b, strong {
+  font-weight: bolder;
+}
+p {
+  margin: 15px 0;
+}
+/*---Bread Crumb Style---*/
+.breadcrumb {
+  line-height: 1.5rem;
+  padding-left: 2rem;
+  li {
+    display: inline-block;
+  }
+}
+/*--120px = footer(3rem) + header(48px) + margin(40px)--*/
+#spa {
+  min-height: calc(100vh - 125px);  /*vh means viewport  */
+}
+/*--Icon Styles---*/
+.material-icons.logout {
+  color: #999;
+}
+.material-icons.login {
+  color: #f39115;
+}
+.icon {
+  cursor: pointer;
+  position: relative;
+  top: 10px;
+  .material-icons.orange { color: orange; }
+}
+/*---Card Style--------*/
+.card {
+  padding: 10px 5%;
+  border-bottom: .5px solid rgba(50, 115, 220, .25);
+}
+.card-title {
+  font-size: 1.5rem;
+}
+.card-footer {
+  border-bottom: 2px solid rgba(50, 115, 220, .25);
+}
+/*-- notify Styles--*/
+#notification {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+}
+#notification i { vertical-align: bottom;}
+@keyframes fadeinout {
+  from, to { opacity: 0; }
+  30% { opacity: 1; }
+}
+.fadeInAndOut {
+  animation: fadeinout 6s linear forwards;
+}
+.is-paused {
+  animation-play-state: paused;
+}
+/*----Modal Dialog Styles-----------------*/
+.modal {
+  min-width: 50%;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 24px;
+  background-color: #f5f5f5;
+  z-index: 3; /* places the modal on top of everything */
+  position: fixed;
+  top: 25%;
+  left: 25%;
+}
+.modal-overlay { /* モーダルの背景を定義 */
+  width: 100%;
+  height: 100%;
+  z-index: 2; /* places the modalOverlay between the main page and the modal dialog */
+  background-color: #000;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+/*----Validation Styles-------------*/
+.validity {
+  position: relative;
+  display: inline-block;
+  .validitytext {
+    visibility: hidden;
+    width: 100px;
+    background-color: inherit;
+    color: red;
+    text-align: center;
+    border-style: none;
+    padding: 5px 0;
+    font-size: 12px;
+    /* Position the validation */
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    margin-left: -50px;
+  }
+  input:invalid + .validitytext {
+    visibility: visible;
+  }
+}
+/*----Tooltip Styles----------------*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+  .tooltiptext {
+    visibility: hidden;
+    width: 100px;
+    background-color: #636161;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: 12px;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 9;
+    top: 100%;
+    left: 50%;
+    margin-left: -50px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent #636161 transparent;
+    }
+  }
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+/*----Form element-------------------------------------------------------*/
+input, button, .button, [type="button"] {
+  border-radius: 2px;
+}
+
+/* Apply cursor pointer to button elements */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"],
+[role="button"] {
+  cursor: pointer;
+}
+/* Replace pointer cursor in disabled elements */
+[disabled] {
+}
+textarea {
+  resize: vertical; /* Specify textarea resizability */
+}
+/* Remove the default button styling in all browsers */
+button,
+input,
+select,
+textarea {
+  border-style: none;
+  font: inherit;
+  color: inherit;
+  padding: 5px;
+  &:focus {
+    outline-style: solid;
+    outline-width: 1px;
+  }
+}
+/* .button default design */
+.button {
+  position: relative;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+  border-width: 0;
+  outline: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  background-color: #fff;
+  color: inherit ;
+  transition: background-color .3s;
+  &:hover, &:focus {
+    outline: none;
+  }
+}
+/*-----End Form Elements-------------------*/  

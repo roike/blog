@@ -1,0 +1,182 @@
+/* Thirdpen|Editor
+ * editor.scss
+ * See license
+ */
+/*----Container General Styles------------*/
+/* body */
+.ly-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+}
+header.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(50, 115, 220, .25);
+  padding-right: 10px;
+}
+footer.footer {
+  background-color: #fff;
+  > p {
+    text-align: center;
+  }
+}
+form {
+  padding: 0 1.5em;
+}
+
+.button:hover {
+  background: #ee3e52;
+}
+
+/*-- notify Styles--*/
+#notification {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  i {
+    vertical-align: bottom;
+  }
+}
+@keyframes fadeinout {
+  from, to { opacity: 0; }
+  30% { opacity: 1; }
+}
+
+.fadeInAndOut {
+  animation: fadeinout 6s linear forwards;
+}
+
+.is-paused {
+  animation-play-state: paused;
+}
+
+/*---Headings Style------------------------*/
+.ly-headings {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
+  grid-gap: 5px;
+  > footer {
+    border-bottom: 2px solid rgba(50, 115, 220, .25);
+  }
+}
+.el-headings-icon {
+  position: relative;
+  top: -10px;
+}
+.bl-headings-subTitle {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: baseline;
+  justify-content: flex-start;
+  font-size: 1.1rem;
+  > span {
+    padding-right: 12px;
+  }
+}
+
+/*---Tui Editor Styles-----------------------*/
+.el-tuiEditor {
+  background-color: #fff;
+}
+.tui-toolbar-icon {
+  color: #5e5e5e !important;
+  font-size: 18px;
+  position: relative;
+  top: -2px;
+} 
+/*---tui custom layerPopup style ----*/
+/* --Popup image file upload-- */
+.bl-tuiPopImage {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, auto);
+  grid-gap: 5px;
+  input[type=text], button {
+    height: 2rem;
+  }
+  img {width: 250px; height: auto;}
+  figure.image {width: 250px; min-height: 250px;}
+}
+.bl-tuiPopImage-params {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  > * {
+    width: 100px !important;
+  }
+}
+
+/* --Popup form -- */
+.bl-tuiPopForm {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, auto);
+  grid-gap: 5px;
+  input[type=text], button {
+    height: 2rem;
+  }
+  textarea {
+    border: 1px solid #bfbfbf;
+  }
+}
+.bl-tuiPopForm-input {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  > input[type=text] {
+    width: 200px !important;
+  }
+}
+.bl-tuiPop-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  > button {
+    color: #5e5e5e;
+    width: 100px !important;
+    margin-left: 5px;
+  }
+}
+/*---PageNation----*/
+.ly-pagenation {
+  display: flex;
+  align-items: baseline;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  > li {
+    font-size: 1.2rem;
+    width: 30px;
+  }
+}
+/*---Root Article Styles---*/
+.ly-wrapperArticle {
+  margin: 0 auto;
+  max-width: 980px;
+}
+.article {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
+  padding: 25px;
+  margin: 10px;
+  background-color: #fff;
+  border-top: 1px solid rgba(50, 115, 220, .25);
+  border-left: 1px solid rgba(50, 115, 220, .25);
+  position: relative;
+}
+.article-title {
+  font-size: 1.7rem;
+}
+.article-footer {
+  border-top: 2px solid rgba(50, 115, 220, .25);
+  .material-icons {
+    position: relative;
+    top: 10px;
+  }
+
+}

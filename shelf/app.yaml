@@ -1,0 +1,36 @@
+service: shelf
+runtime: go114
+env_variables:
+  PROJECT_ID: "thirdpen"
+  DEFAULT_BUCKET: "thirdpen.appspot.com"
+
+instance_class: F1
+automatic_scaling:
+  target_cpu_utilization: 0.70
+  target_throughput_utilization: 0.70
+  min_idle_instances: 0
+  max_idle_instances: 1
+  min_instances: 0
+  min_pending_latency: automatic
+  max_pending_latency: automatic
+  max_concurrent_requests: 10
+
+handlers:  
+- url: /icon.png
+  static_files: shelf/static/images/icon.png
+  upload: shelf/static/images/icon.png
+- url: /images
+  static_dir: shelf/static/images
+- url: /main.js
+  static_files: shelf/static/main.js
+  upload: shelf/static/main.js
+- url: /index.html
+  static_files: shelf/static/index.html
+  upload: shelf/static/index.html
+- url: /.*
+  secure: always
+  redirect_http_response_code: 301
+  script: auto
+- url: /
+  static_files: shelf/static/index.html
+  upload: shelf/static/index.html

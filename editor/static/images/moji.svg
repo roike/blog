@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="140px" height="48px" viewBox="0 0 140 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>moji</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="moji">
+            <path d="M76.8693925,40.0001543 C109.605666,40.0117781 136,40.67883 136,41.5 C136,42.3284271 109.137085,43 76,43 C75.7122969,43 75.4250668,42.9999494 75.1383231,42.9998485 C73.9033531,45.0691944 73.0907987,46.2346377 72.9036769,46.1392944 C72.7314723,46.0515517 73.111778,44.9076538 73.9125672,42.9991092 C41.7420979,42.9716113 16,42.3109605 16,41.5 C16,40.677999 42.4477777,40.0104283 75.2300045,40.000121 C76.8525037,36.4265693 79.1929995,31.5931147 81.8816892,26.3162639 C87.3321978,15.6190385 92.1496253,7.15048235 92.6417146,7.40121438 C93.1338039,7.65194641 89.1142109,16.5270195 83.6637023,27.2242449 C81.1413839,32.1745735 78.7546422,36.6476241 76.8693925,40.0001543 Z" id="pen" fill="#8C631A" opacity="0.343691698"></path>
+            <text id="Third--Pen" opacity="0.6" font-family="Roboto-BoldItalic, Roboto" font-size="24" font-style="italic" font-weight="bold" fill="#806940">
+                <tspan x="23" y="36">Third  Pen</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

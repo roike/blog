@@ -1,0 +1,9 @@
+dispatch:
+    - url: "thirdpen.com/*"
+      service: shelf  
+
+    - url: "editor.thirdpen.com/*"
+      service: default
+
+    - url: "shelf.thirdpen.com/*"
+      service: shelf  
